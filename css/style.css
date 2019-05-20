@@ -39,6 +39,7 @@ body {
   align-items: center;
   padding: 20px 10px;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0; }
@@ -90,14 +91,36 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-    .main__gallery .item img {
-      max-width: 100%; }
+    .main__gallery .item .item__img {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: 0.3s ease-in-out;
+      cursor: pointer; }
+      .main__gallery .item .item__img:hover > h3 {
+        display: flex;
+        text-align: center; }
+      .main__gallery .item .item__img img {
+        max-width: 100%; }
+      .main__gallery .item .item__img h3 {
+        display: none;
+        position: absolute;
+        font-size: 150%;
+        color: white;
+        background: #1b2f2fa1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center; }
     .main__gallery .item .item__box {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      align-items: center;
-      width: calc(100% - 30px); }
+      width: 100%; }
       .main__gallery .item .item__box a {
         display: block;
         padding: 5px;
@@ -129,7 +152,8 @@ body {
     width: 100%; }
   .header {
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    z-index: 10; }
     .header h3 {
       justify-content: flex-start;
       display: flex;
@@ -164,8 +188,33 @@ body {
       flex: 0 0 calc(30% - 20px);
       margin: 10px;
       padding: 10px 0; }
-      .main__gallery .item img {
-        max-width: 100%; }
+      .main__gallery .item .item__img {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s ease-in-out;
+        cursor: pointer; }
+        .main__gallery .item .item__img:hover > h3 {
+          display: flex;
+          text-align: center; }
+        .main__gallery .item .item__img img {
+          max-width: 100%; }
+        .main__gallery .item .item__img h3 {
+          display: none;
+          position: absolute;
+          font-size: 150%;
+          color: white;
+          background: #1b2f2fa1;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          justify-content: center;
+          align-items: center; }
+      .main__gallery .item .item__box {
+        width: calc(100% - 30px); }
   .footer {
     display: flex;
     flex-direction: column;
