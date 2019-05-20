@@ -2,62 +2,75 @@
 @import "layout";
 @import "components";
 
-
-.container {
-    width: 100%;
-}
-
+////////////////////////
+// mobile view
 .header {
-    background-color: indianred;
     display: flex;
-    justify-content: space-between;
+    background-color: chocolate;;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
     h3 {
-        justify-content: flex-start;
-        display: flex;
-        flex: 1;
-        background: aquamarine;
-        margin: 0 10px;
-        padding: 5px;
+        padding: 10px;
+        font-size: 20px;
     }
 }
 
 .header__right {
-    display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     button {
+        background-color: skyblue;
         margin-left: 5px;
-        padding: 5px;
+        padding: 15px;
+        border: none;
     }
 }
 
 .main {
-    background-color: aqua;
+    margin-top: 161px;
+    background-color: burlywood;
     h2 {
         padding: 10px;
     }
 }
 
 .main__content {
+    background-color: rgb(38, 0, 128);
     display: flex;
+    flex-direction: column;
 }
 
 .nav {
-    flex: 20%;
+    flex: 1;
     background-color: blueviolet;
     padding: 10px;
+    font-size: 200%;
+
+    a {
+        display: block;
+        padding: 10px 0;
+    }
+
+
 }
 
 .main__gallery {
-    flex: 80%;
+    flex: 1;
     background-color: rgb(59, 209, 22);
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
 
     .item {
-        flex: 0 0 calc(30% - 20px);
+        flex: 1;
         margin: 10px;
         padding: 10px;
         img {
@@ -70,17 +83,118 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: yellowgreen;
+    background-color: yellow;
 }
 
 .footer_nav ul {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    a {
+        display: block;
+        padding: 10px 0;
+        font-size: 200%;
+    }
 }
 
 .footer_rights {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+
+////////////////////////
+// desktop view
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+
+        h3 {
+            justify-content: flex-start;
+            display: flex;
+            flex: 1;
+            background: aquamarine;
+            margin: 0 10px;
+            padding: 5px;
+        }
+    }
+    
+    .header__right {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            background-color: orangered;
+        }
+    }
+    
+    .main {
+        background-color: aqua;
+        margin-top: 85px;
+        h2 {
+            padding: 10px;
+        }
+    }
+    
+    .main__content {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav {
+        flex: 20%;
+        background-color: blueviolet;
+        padding: 10px;
+    }
+    
+    .main__gallery {
+        flex: 80%;
+        background-color: rgb(59, 209, 22);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    
+        .item {
+            flex: 0 0 calc(30% - 20px);
+            margin: 10px;
+            padding: 10px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: yellowgreen;
+    }
+    
+    .footer_nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        a {
+            display: block;
+            padding: 10px;
+        }
+    }
+    
+    .footer_rights {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
