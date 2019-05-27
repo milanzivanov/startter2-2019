@@ -12,11 +12,9 @@
     align-items: center;
     padding: 20px 10px;
 
-    position: fixed;
+    position: sticky;
     z-index: 10;
     top: 0;
-    left: 0;
-    right: 0;
 
     h3 {
         padding: 10px;
@@ -35,7 +33,6 @@
 }
 
 .main {
-    margin-top: 161px;
     background-color: burlywood;
     h2 {
         padding: 10px;
@@ -191,7 +188,6 @@
     
     .main {
         background-color: aqua;
-        margin-top: 85px;
         h2 {
             padding: 10px;
         }
